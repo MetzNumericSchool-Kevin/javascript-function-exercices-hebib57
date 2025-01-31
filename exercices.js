@@ -21,3 +21,14 @@ function salutations(nom_sorcier) {
   );
 }
 salutations(nom_sorcier);
+
+//Quel est le tarif d'une potion ?
+
+function tarif_potion(id, inventaire, quantite = 1) {
+  const prix_total = inventaire[0].prix * quantite;
+  return prix_total;
+}
+
+let prix_total = tarif_potion("potion_soin", inventaire, 3);
+
+console.log(`Le prix total est ${prix_total}`);
