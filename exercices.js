@@ -32,3 +32,14 @@ function tarif_potion(id, inventaire, quantite = 1) {
 let prix_total = tarif_potion("potion_soin", inventaire, 3);
 
 console.log(`Le prix total est ${prix_total}`);
+
+//Fabrication de potion
+
+function fabrication_potion(id, prix = 10, stock = 1) {
+  const nouvellePotion = { id, prix, stock };
+  inventaire.push(nouvellePotion);
+  console.log(`Nouvelle potion créée: ${id}, ${prix}, ${stock}`);
+  return nouvellePotion;
+}
+
+console.log(fabrication_potion());
